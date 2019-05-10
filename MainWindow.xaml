@@ -6,8 +6,17 @@
         xmlns:local="clr-namespace:csHomeWork3"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Grid>
 
-    <StackPanel>
-        <Button x:Name="uxSubmit" Click="UxSubmit_Click" Content="Click for List" Margin="100,150,100.0,0" />
-    </StackPanel>
+        <ListView x:Name="uxList" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" GridViewColumnHeader.Click="ColumnHeaderClicked" Margin="103,10,115.4,0" RenderTransformOrigin="0.511,0.314" Width="300">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}">
+                    </GridViewColumn>
+                    <GridViewColumn Header="Password" Width="150" DisplayMemberBinding="{Binding Password}">
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
 </Window>
